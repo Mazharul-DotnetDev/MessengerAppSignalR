@@ -1,0 +1,34 @@
+﻿<script src="~/lib/microsoft/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+<div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+    <header class="card-header" style="background-color: tomato; color: #fff; padding: 10px;">
+        <h1 style="margin: 0;">Chat</h1>
+    </header>
+    <div class="card-body" style="padding: 15px; display: flex; flex-direction: row; align-items: flex-start;">
+        <div style="flex: 1; margin-right: 10px; width: 70%;">
+            <label for="txtInput" style="font-weight: bold; font-size: 18px; color: #333; display: block; margin-bottom: 10px;">Input:</label>
+            <input id="txtInput" class="form-control" required style="width: 100%; padding: 12px; font-size: 16px;" />
+            <button class="btn btn-success" id="btnSend" style="width: 100%; margin-top: 10px;">Send</button>
+        </div>
+
+
+        <div style="flex: 2;">
+            <div class="card-footer" style="background-color: #f4f4f4; padding: 15px;">
+                <ul id="chatLog" style="list-style-type: none; padding: 0; text-align: left;"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/chat.js"></script>
+    <script>
+        // Add some dynamic styling in the script section if needed
+        $(document).ready(function () {
+            // Example: Change background color on hover
+            $('#btnSend').hover(function () {
+                $(this).css('background-color', '#2ecc71');
+            }, function () {
+                $(this).css('background-color', '#5cb85c');
+            });
+        });
+    </script>
+}
