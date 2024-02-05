@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Chat";
+}
+
+
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+
+<div class="card">
+    <header class="card-header">
+        <h1>Chat</h1>
+    </header>
+    <div class="card-body">
+        <div>
+            <label for="txtInput">Input:</label>
+            <input id="txtInput" class="form-control" required />
+        </div>
+        <button class="btn btn-outline-success" id="btnSend">Send</button>
+    </div>
+    <div class="card-footer">
+        <ul id="chatLog"></ul>
+    </div>
+</div>
+
+
+@section Scripts{
+
+	<script src="~/js/chat.js"></script>
+
+
+}
+
+
+
